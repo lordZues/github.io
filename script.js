@@ -12,7 +12,7 @@
   });
 
   const form = document.querySelector('.subscribe-form');
-  form?.addEventListener('submit', (event) => {
+  form?.addEventListener('submit', () => {
     const button = form.querySelector('button[type="submit"]');
     if (button) {
       button.disabled = true;
