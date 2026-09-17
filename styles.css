@@ -6,7 +6,6 @@
   --light: #f4f7f3;
   --line: #dde5df;
   --gold: #d9a64e;
-  --cream: #fbf7f2;
   --white: #ffffff;
   --shadow: 0 18px 45px rgba(21, 36, 32, 0.08);
 }
@@ -27,11 +26,6 @@ body {
   line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -50,8 +44,8 @@ textarea {
 
 .topbar {
   background: var(--deep-green);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -68,7 +62,7 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -287,7 +281,6 @@ textarea {
 }
 
 .card-header,
-.card-topline,
 .result-meta,
 .mini-stats,
 .footer-inner {
@@ -297,23 +290,19 @@ textarea {
   gap: 12px;
 }
 
-.status-pill,
-.tag {
+.status-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 30px;
   padding: 0.32rem 0.7rem;
   border-radius: 999px;
+  background: rgba(20, 92, 73, 0.1);
+  color: var(--green);
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.status-pill {
-  background: rgba(20, 92, 73, 0.1);
-  color: var(--green);
 }
 
 .card-date {
@@ -337,25 +326,24 @@ textarea {
   text-transform: uppercase;
 }
 
-.big-balls {
+.stat-display {
   margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.big-balls span,
-.balls span {
+.stat-display span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 84px;
+  min-width: 120px;
   min-height: 58px;
   border-radius: 16px;
   background: var(--white);
   border: 1px solid var(--line);
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--ink);
 }
 
@@ -461,7 +449,6 @@ textarea {
 .service-card,
 .process-step,
 .price-card,
-.result-card,
 .stat-card,
 .faq-list details {
   border: 1px solid var(--line);
@@ -487,8 +474,7 @@ textarea {
 }
 
 .service-card h3,
-.process-step h3,
-.result-card h3 {
+.process-step h3 {
   margin: 20px 0 12px;
   font-size: 1.45rem;
 }
@@ -563,52 +549,6 @@ textarea {
   font-weight: 800;
   align-items: center;
   justify-content: center;
-}
-
-.results-section {
-  padding: 8px 0 90px;
-}
-
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.result-card {
-  padding: 20px 18px 16px;
-}
-
-.result-card.featured {
-  background: linear-gradient(180deg, rgba(20, 92, 73, 0.06), rgba(255, 255, 255, 0));
-}
-
-.tag-green {
-  background: rgba(20, 92, 73, 0.1);
-  color: var(--green);
-}
-
-.tag-gold {
-  background: rgba(217, 166, 78, 0.16);
-  color: #8f6516;
-}
-
-.tag-purple {
-  background: rgba(130, 102, 197, 0.12);
-  color: #5f4f9c;
-}
-
-.balls {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.card-footer {
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 0.9rem;
 }
 
 .pricing-grid {
@@ -710,6 +650,34 @@ textarea {
   padding: 32px 28px;
 }
 
+.contact-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.phone-link,
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.phone-link {
+  background: rgba(20, 92, 73, 0.08);
+  color: var(--green);
+}
+
+.whatsapp-link {
+  background: #25d366;
+  color: var(--white);
+}
+
 .subscribe-form {
   display: grid;
   gap: 14px;
@@ -764,8 +732,8 @@ textarea {
   .subscribe-wrap,
   .services-grid,
   .pricing-grid,
-  .results-grid,
-  .process-grid {
+  .process-grid,
+  .proof-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -777,9 +745,8 @@ textarea {
   }
 
   .services-grid,
-  .results-grid,
-  .process-grid,
-  .pricing-grid {
+  .pricing-grid,
+  .process-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -820,7 +787,6 @@ textarea {
   }
 
   .services-grid,
-  .results-grid,
   .process-grid,
   .pricing-grid,
   .proof-grid,
@@ -829,7 +795,6 @@ textarea {
   }
 
   .card-header,
-  .card-topline,
   .result-meta,
   .footer-inner {
     flex-direction: column;
