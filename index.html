@@ -1,64 +1,269 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Daily numbers, draws and results in one place.">
-  <title>Daily Results | Latest Draw Results</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="announcement">Latest results are updated daily <span>•</span> Check back after each draw</div>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Daily Results home"><span class="brand-mark">DR</span><span>Daily<span>Results</span></span></a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="nav" aria-label="Main navigation">
-        <a class="active" href="#results">Results</a>
-        <a href="#schedule">Draw schedule</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="#subscribe">Get updates</a>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Official results, draw schedules, and daily numbers for all major draws."
+    />
+    <title>ZM Results | Latest Draw Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Official daily results</span>
+        <span>Updated after each draw</span>
+      </div>
     </div>
-  </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Your daily results hub</p>
-          <h1>Results that are<br><em>easy to find.</em></h1>
-          <p class="hero-copy">Find the latest published draw results, browse previous dates, and stay up to date from any device.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#results">View latest results <span>→</span></a><a class="text-link" href="#schedule">See schedule</a></div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="ZM Results home">
+          <span class="brand-mark">ZM</span>
+          <span class="brand-text">ZM<span>Results</span></span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a class="active" href="#results">Results</a>
+          <a href="#schedule">Draw Schedule</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="button button-primary nav-button" href="#subscribe">Get alerts</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy-wrap">
+            <p class="eyebrow">Latest numbers & outcomes</p>
+            <h1>Find today’s winning results.</h1>
+            <p class="hero-copy">
+              Browse fresh draw results, check scheduled releases, and keep track of the latest
+              winning combinations from one clean, easy-to-read dashboard.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#results">View latest results</a>
+              <a class="text-link" href="#schedule">See draw schedule</a>
+            </div>
+
+            <ul class="hero-metrics" aria-label="Site statistics">
+              <li><strong>24/7</strong><span>Live updates</span></li>
+              <li><strong>Daily</strong><span>Fresh draws</span></li>
+              <li><strong>Easy</strong><span>Quick access</span></li>
+            </ul>
+          </div>
+
+          <aside class="hero-card" aria-label="Featured latest result">
+            <div class="card-header">
+              <span class="status-pill">Live</span>
+              <span class="card-date">Today</span>
+            </div>
+
+            <div class="featured-result">
+              <p class="result-label">Main Draw</p>
+              <div class="big-balls" aria-label="Winning numbers">
+                <span>04</span>
+                <span>17</span>
+                <span>26</span>
+                <span>38</span>
+                <span>44</span>
+              </div>
+              <div class="result-meta">
+                <span>Updated 18:30</span>
+                <span>Verified</span>
+              </div>
+            </div>
+
+            <div class="mini-stats">
+              <div>
+                <span>Draw</span>
+                <strong>Daily Pick</strong>
+              </div>
+              <div>
+                <span>Published</span>
+                <strong>Today</strong>
+              </div>
+            </div>
+          </aside>
         </div>
-        <div class="hero-card" aria-label="Latest result preview">
-          <div class="card-top"><span class="status-dot"></span> Latest published result <span class="date">Today</span></div>
-          <div class="featured-result"><p>Daily Pick</p><strong>04&nbsp;&nbsp; 17&nbsp;&nbsp; 26&nbsp;&nbsp; 38&nbsp;&nbsp; 44</strong><small>Updated 18:30</small></div>
-          <div class="hero-card-footer"><span>Verified publication</span><span>↗</span></div>
+      </section>
+
+      <section class="results-section" id="results">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Published results</p>
+              <h2>Latest results</h2>
+            </div>
+            <label class="date-picker" aria-label="Choose date">
+              <span>Choose date</span>
+              <input type="date" value="2026-09-17" />
+            </label>
+          </div>
+
+          <div class="results-grid">
+            <article class="result-card featured">
+              <div class="card-topline">
+                <span class="tag tag-green">Latest</span>
+                <span>18:30</span>
+              </div>
+              <h3>Daily Pick</h3>
+              <div class="balls">
+                <span>04</span>
+                <span>17</span>
+                <span>26</span>
+                <span>38</span>
+                <span>44</span>
+              </div>
+              <div class="card-footer">
+                <small>Thursday, 17 Sep 2026</small>
+                <button type="button" class="copy-btn">Copy</button>
+              </div>
+            </article>
+
+            <article class="result-card">
+              <div class="card-topline">
+                <span class="tag tag-gold">Midday</span>
+                <span>13:00</span>
+              </div>
+              <h3>Quick Draw</h3>
+              <div class="balls">
+                <span>03</span>
+                <span>11</span>
+                <span>19</span>
+                <span>27</span>
+                <span>41</span>
+              </div>
+              <div class="card-footer">
+                <small>Thursday, 17 Sep 2026</small>
+                <button type="button" class="copy-btn">Copy</button>
+              </div>
+            </article>
+
+            <article class="result-card">
+              <div class="card-topline">
+                <span class="tag tag-purple">Evening</span>
+                <span>20:00</span>
+              </div>
+              <h3>Lucky 7</h3>
+              <div class="balls">
+                <span>07</span>
+                <span>14</span>
+                <span>22</span>
+                <span>35</span>
+                <span>49</span>
+              </div>
+              <div class="card-footer">
+                <small>Wednesday, 16 Sep 2026</small>
+                <button type="button" class="copy-btn">Copy</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="schedule-section" id="schedule">
+        <div class="container schedule-grid">
+          <div class="schedule-copy">
+            <p class="eyebrow">Never miss a draw</p>
+            <h2>Draw schedule</h2>
+            <p>
+              Stay on top of the daily release times and be ready for the next draw before it starts.
+            </p>
+          </div>
+
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <span class="schedule-icon icon-green">☀</span>
+              <div>
+                <strong>Quick Draw</strong>
+                <small>Daily · 13:00</small>
+              </div>
+              <em>13:00</em>
+            </div>
+
+            <div class="schedule-item">
+              <span class="schedule-icon icon-gold">✦</span>
+              <div>
+                <strong>Daily Pick</strong>
+                <small>Daily · 18:30</small>
+              </div>
+              <em>18:30</em>
+            </div>
+
+            <div class="schedule-item">
+              <span class="schedule-icon icon-purple">★</span>
+              <div>
+                <strong>Lucky 7</strong>
+                <small>Mon, Wed, Fri · 20:00</small>
+              </div>
+              <em>20:00</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe-section" id="subscribe">
+        <div class="container subscribe-wrap">
+          <div>
+            <p class="eyebrow">Stay informed</p>
+            <h2>Get result alerts.</h2>
+          </div>
+
+          <form class="subscribe-form" aria-label="Email signup form">
+            <input type="email" placeholder="Enter your email" aria-label="Email address" required />
+            <button type="submit" class="button button-dark">Subscribe</button>
+            <span class="form-status" aria-live="polite"></span>
+          </form>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="container about-wrap">
+          <div>
+            <p class="eyebrow eyebrow-dark">About</p>
+            <h2>Results you can read fast.</h2>
+          </div>
+          <p>
+            ZM Results is designed to provide a clean, straightforward look at the latest draw outcomes,
+            schedule updates, and published numbers in one place.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-inner">
+        <a href="#top" class="brand footer-brand" aria-label="ZM Results home">
+          <span class="brand-mark">ZM</span>
+          <span class="brand-text">ZM<span>Results</span></span>
+        </a>
+
+        <p>© 2026 ZM Results. All rights reserved.</p>
+
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#subscribe">Alerts</a>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <section class="content-section" id="results">
-      <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">Published results</p><h2>Latest results</h2></div><label class="date-picker">Choose date <input type="date" id="result-date"></label></div>
-        <div class="results-grid">
-          <article class="result-card featured"><div class="result-card-head"><span class="pill green">Latest</span><span>18:30</span></div><p class="result-name">Daily Pick</p><div class="numbers"><b>04</b><b>17</b><b>26</b><b>38</b><b>44</b></div><div class="result-meta"><span>Thursday, 17 September 2026</span><button class="copy-btn" data-numbers="04 17 26 38 44">Copy numbers</button></div></article>
-          <article class="result-card"><div class="result-card-head"><span class="pill orange">Midday</span><span>13:00</span></div><p class="result-name">Quick Draw</p><div class="numbers"><b>03</b><b>11</b><b>19</b><b>27</b><b>41</b></div><div class="result-meta"><span>Thursday, 17 September 2026</span><button class="copy-btn" data-numbers="03 11 19 27 41">Copy numbers</button></div></article>
-          <article class="result-card"><div class="result-card-head"><span class="pill purple">Evening</span><span>20:00</span></div><p class="result-name">Lucky Seven</p><div class="numbers"><b>07</b><b>14</b><b>22</b><b>35</b><b>49</b></div><div class="result-meta"><span>Wednesday, 16 September 2026</span><button class="copy-btn" data-numbers="07 14 22 35 49">Copy numbers</button></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="schedule-section" id="schedule"><div class="container schedule-grid"><div><p class="eyebrow">Never miss a draw</p><h2>Draw schedule</h2><p class="muted">Results are published shortly after each draw is completed.</p></div><div class="schedule-list"><div><span class="schedule-icon green-bg">☀</span><span><b>Quick Draw</b><small>Every day · 13:00</small></span><strong>13:00</strong></div><div><span class="schedule-icon orange-bg">✦</span><span><b>Daily Pick</b><small>Every day · 18:30</small></span><strong>18:30</strong></div><div><span class="schedule-icon purple-bg">★</span><span><b>Lucky Seven</b><small>Mon, Wed, Fri · 20:00</small></span><strong>20:00</strong></div></div></div></section>
-
-    <section class="subscribe" id="subscribe"><div class="container subscribe-inner"><div><p class="eyebrow">Stay informed</p><h2>Get result updates.</h2></div><form id="subscribe-form"><input type="email" placeholder="Your email address" aria-label="Your email address" required><button class="button button-dark">Subscribe <span>→</span></button><p class="form-message" role="status"></p></form></div></section>
-    <section class="about" id="about"><div class="container about-inner"><p class="eyebrow">About this site</p><p>Daily Results is an independent results information service. Always verify results with the official publishing authority before making any claim.</p></div></section>
-  </main>
-  <footer><div class="container footer-inner"><a class="brand" href="#top"><span class="brand-mark">DR</span><span>Daily<span>Results</span></span></a><p>© 2026 Daily Results. Information only.</p><div><a href="#about">Disclaimer</a><a href="#about">Contact</a></div></div></footer>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
