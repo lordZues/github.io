@@ -1,22 +1,16 @@
 (() => {
-  const menuToggle = document.querySelector('.menu-toggle');
+  const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
-
-  menuToggle?.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(open));
+  toggle?.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
-
-  document.querySelectorAll('.nav a').forEach((link) => {
-    link.addEventListener('click', () => nav?.classList.remove('open'));
-  });
-
-  const form = document.querySelector('.subscribe-form');
-  form?.addEventListener('submit', () => {
-    const button = form.querySelector('button[type="submit"]');
-    if (button) {
-      button.disabled = true;
-      button.textContent = 'Sending…';
-    }
+  document.querySelectorAll('.nav a').forEach((link) => link.addEventListener('click', () => {
+    nav?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  }));
+  document.querySelector('.contact-form')?.addEventListener('submit', (event) => {
+    const button = event.currentTarget.querySelector('button');
+    if (button) { button.disabled = true; button.textContent = 'Sending…'; }
   });
 })();
